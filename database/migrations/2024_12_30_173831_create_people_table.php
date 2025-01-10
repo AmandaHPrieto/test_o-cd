@@ -17,8 +17,8 @@ return new class extends Migration
             $table->bigInteger('created_by')->unsigned()->nullable(false);
             $table->string('first_name', 255)->collation('utf8mb4_unicode_ci')->nullable(false);
             $table->string('last_name', 255)->collation('utf8mb4_unicode_ci')->nullable(false);
-            $table->varchar('birth_name', 255)->collation('utf8mb4_unicode_ci')->nullable(true);
-            $table->varchar('middle_names', 255)->collation('utf8mb4_unicode_ci')->nullable(true);
+            $table->string('birth_name', 255)->collation('utf8mb4_unicode_ci')->nullable(true); // varchar n'est pas accepté par Laravel
+            $table->string('middle_names', 255)->collation('utf8mb4_unicode_ci')->nullable(true);
             $table->date('date_of_birth')->nullable(true);
             $table->timestamps();
 
